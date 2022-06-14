@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: kubed-deploy
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  path: ./config/base/applications/cert-manager/fluxv2/deploy
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  patches: []
