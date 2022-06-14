@@ -1,0 +1,26 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: kubed
+  namespace: kubed
+spec:
+  interval: 1m
+  url: https://charts.appscode.com/stable/
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kubed
+  namespace: kubed
+spec:
+  releaseName: kubed
+  chart:
+    spec:
+      chart: kubed
+      sourceRef:
+        kind: HelmRepository
+        name: kubed
+        namespace: cert-manager
+      version: v0.13.2
+  interval: 1m
