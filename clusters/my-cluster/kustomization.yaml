@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../global/fluxv2-gke/
+  - ../../../applications/goldilocks/fluxv2/
+  - ../../../applications/secrets-store-csi-driver/v1/
+  - ../../../applications/vault-csi-provider/v1/
+  - ../../../storage/gcp/v1/
+  - ../../../oidc/v1/
