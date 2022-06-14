@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./config/base/applications/cert-manager/fluxv2/deploy
+  path: ./config/base/applications/kubed/fluxv2/deploy
   prune: true
   sourceRef:
     kind: GitRepository
