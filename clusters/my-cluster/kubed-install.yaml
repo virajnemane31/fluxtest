@@ -21,6 +21,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kubed
-        namespace: cert-manager
+        namespace: kubed
       version: v0.13.2
   interval: 1m
